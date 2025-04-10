@@ -30,15 +30,18 @@ def eliminar(datos):
     else:
         print(f"La clave {datoEliminar} no existe en los datos.")
 
-while salir == False:
-    opc = int(input("Menú Interactivo" + Fore.GREEN + "\n1. Editar" + Fore.RED + "\n2. Eliminar" + Fore.CYAN + "\n3. Salir" + Fore.WHITE + "\nDigite la opción: "))
-    if opc == 1:
-        editar(datos)
-    elif opc == 2:
-        eliminar(datos)
-    elif opc == 3:
-        print("Saliendo...")
-        salir = True
-    else:
-        print("Opción no válida, intente nuevamente.")
-    print("----------------------------")
+def opciones(salir):
+    while salir == False:
+        opc = int(input("Menú Interactivo" + Fore.GREEN + "\n1. Editar" + Fore.RED + "\n2. Eliminar" + Fore.CYAN + "\n3. Salir" + Fore.WHITE + "\nDigite la opción: "))
+        if opc == 1:
+            editar(datos)
+        elif opc == 2:
+            eliminar(datos)
+        elif opc == 3:
+            print("Saliendo...")
+            salir = True
+        else:
+            print("Opción no válida, intente nuevamente.")
+        print("----------------------------")
+        
+opciones(salir)
