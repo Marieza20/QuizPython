@@ -1,9 +1,10 @@
-salir = False
+from colorama import init, Fore, Back, Style
 
+salir = False
 nombre = ["Santiago","Jorge","Luis","Carlos","Juan","Pedro","Pablo","Diego","Andres"]
 
 while salir == False:
-    opc = int(input("Menú Interactivo\n1. Mostrar Mensajes\n2. Mostrar Nombres\n3. Salir\nDigite la opción: "))
+    opc = int(input("Menú Interactivo" + Fore.CYAN + "\n1. Mostrar Mensajes" + Fore.MAGENTA + "\n2. Mostrar Nombres" + Fore.RED + "\n3. Salir" + Fore.WHITE + "\nDigite la opción: "))
     
     if opc == 1:
         print("Los grandes logros de cualquier persona generalmente dependen de muchas manos, corazones y mentes.")

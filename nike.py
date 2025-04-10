@@ -1,3 +1,5 @@
+from colorama import init, Fore, Back, Style
+
 salir = False
 datos = {
     "producto": "Nike Air Max 270",
@@ -29,7 +31,7 @@ def eliminar(datos):
         print(f"La clave {datoEliminar} no existe en los datos.")
 
 while salir == False:
-    opc = int(input("Menú Interactivo\n1. Editar\n2. Eliminar\n3. Salir\nDigite la opción: "))
+    opc = int(input("Menú Interactivo" + Fore.GREEN + "\n1. Editar" + Fore.RED + "\n2. Eliminar" + Fore.CYAN + "\n3. Salir" + Fore.WHITE + "\nDigite la opción: "))
     if opc == 1:
         editar(datos)
     elif opc == 2:
